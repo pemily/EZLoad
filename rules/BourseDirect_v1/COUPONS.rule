@@ -5,7 +5,7 @@
   "enabled" : true,
   "description" : [
     "Versement de dividende sur le compte de liquidité.",
-    "?? Quel devrait etre le nom de l'opération:   Dividende brut | Dividende brut soumis a abattement | Dividende brut non soumis a abattement ???",
+    "?? Quel devrait etre le nom de l'opération:   Dividende brut | Dividende brut soumis a abattement | Dividende brut non soumis a abattement ?",
     "?? Je n'ai pas pris en compte la commission ?? je n'ai pas d'exemple toujours a 0"
   ],
   "ezLoadVersion" : 1,
