@@ -9,7 +9,7 @@
     "????? Je n'ai pas pris en compte la commission ?? je n'ai pas d'exemple toujours a 0"
   ],
   "ezLoadVersion" : 1,
-  "condition" : "ezOperation_INFO1 == 'COUPONS'",
+  "condition" : "ezOperation_INFO1 == \"COUPONS\"",
   "shareId" : "ezOperation_INFO2",
   "operationRules" : [
     {
@@ -17,33 +17,33 @@
       "operationCompteTypeExpr" : "computeEzAccountTypeName()",
       "operationBrokerExpr" : "ezBrokerName",
       "operationQuantityExpr" : "-ezOperation_QUANTITE",
-      "operationTypeExpr" : "'Dividende brut'",
+      "operationTypeExpr" : "\"Dividende brut\"",
       "operationActionNameExpr" : "ezOperationShareUserName",
       "operationCountryExpr" : "ezMarketCountry",
       "operationAmountExpr" : "ezOperation_BRUT",
-      "operationDescriptionExpr" : "'Dividende versé pour ' + (-ezOperation_QUANTITE) + ' actions ' + ezShareCode"
+      "operationDescriptionExpr" : "\"Dividende versé pour \" + (-ezOperation_QUANTITE) + \" actions \" + ezShareCode"
     },
     {
       "operationDateExpr" : "ezOperation_DATE",
       "operationCompteTypeExpr" : "computeEzAccountTypeName()",
       "operationBrokerExpr" : "ezBrokerName",
       "operationQuantityExpr" : "-ezOperation_QUANTITE",
-      "operationTypeExpr" : "'Prélèvements sociaux'",
+      "operationTypeExpr" : "\"Prélèvements sociaux\"",
       "operationActionNameExpr" : "ezOperationShareUserName",
       "operationCountryExpr" : "ezMarketCountry",
       "operationAmountExpr" : "-ezOperation_CONTRI_SOC",
-      "operationDescriptionExpr" : "'Prélèvement sociaux pour dividende versé de ' + (-ezOperation_QUANTITE) + ' actions ' + ezShareCode"
+      "operationDescriptionExpr" : "\"Prélèvement sociaux pour dividende versé de \" + (-ezOperation_QUANTITE) + \" actions \" + ezShareCode"
     },
     {
       "operationDateExpr" : "ezOperation_DATE",
       "operationCompteTypeExpr" : "computeEzAccountTypeName()",
       "operationBrokerExpr" : "ezBrokerName",
       "operationQuantityExpr" : "-ezOperation_QUANTITE",
-      "operationTypeExpr" : "'Retenue fiscale'",
+      "operationTypeExpr" : "\"Retenue fiscale\"",
       "operationActionNameExpr" : "ezOperationShareUserName",
       "operationCountryExpr" : "ezMarketCountry",
       "operationAmountExpr" : "-ezOperation_PRELEVEM",
-      "operationDescriptionExpr" : "'Retenue fiscale pour dividende versé de ' + (-ezOperation_QUANTITE) + ' actions ' + ezShareCode"
+      "operationDescriptionExpr" : "\"Retenue fiscale pour dividende versé de \" + (-ezOperation_QUANTITE) + \" actions \" + ezShareCode"
     },
     {
       "condition" : "ezOperation_CRED_IMPOT != 0",
@@ -51,11 +51,11 @@
       "operationCompteTypeExpr" : "computeEzAccountTypeName()",
       "operationBrokerExpr" : "ezBrokerName",
       "operationQuantityExpr" : "-ezOperation_QUANTITE",
-      "operationTypeExpr" : "'Acompte Impôt sur le Revenu'",
+      "operationTypeExpr" : "\"Acompte Impôt sur le Revenu\"",
       "operationActionNameExpr" : "ezOperationShareUserName",
       "operationCountryExpr" : "ezMarketCountry",
       "operationAmountExpr" : "ezOperation_CRED_IMPOT",
-      "operationDescriptionExpr" : "'Crédit d'Impôt pour dividende versé de ' + (-ezOperation_QUANTITE) + ' actions ' + ezShareCode"
+      "operationDescriptionExpr" : "\"Crédit d'Impôt pour dividende versé de \" + (-ezOperation_QUANTITE) + \" actions \" + ezShareCode"
     }
   ],
   "portefeuilleRules" : [
@@ -63,7 +63,7 @@
       "portefeuilleValeurExpr" : "ezLiquidityName",
       "portefeuilleCompteExpr" : "computeEzAccountTypeName()",
       "portefeuilleCourtierExpr" : "ezBrokerName",
-      "portefeuilleTickerGoogleFinanceExpr" : "'LIQUIDITE'",
+      "portefeuilleTickerGoogleFinanceExpr" : "\"LIQUIDITE\"",
       "portefeuillePaysExpr" : "ezMonPortefeuillePays",
       "portefeuilleSecteurExpr" : "ezMonPortefeuilleSecteur",
       "portefeuilleIndustrieExpr" : "ezMonPortefeuilleIndustrie",

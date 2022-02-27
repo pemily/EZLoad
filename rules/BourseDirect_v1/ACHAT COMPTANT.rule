@@ -4,10 +4,10 @@
   "name" : "ACHAT COMPTANT",
   "enabled" : true,
   "description" : [
-    "Achat d'actions.."
+    "Achat d'actions."
   ],
   "ezLoadVersion" : 1,
-  "condition" : "ezOperation_INFO1 == 'ACHAT COMPTANT'",
+  "condition" : "ezOperation_INFO1 == \"ACHAT COMPTANT\"",
   "shareId" : "ezOperation_INFO2",
   "operationRules" : [
     {
@@ -15,22 +15,22 @@
       "operationCompteTypeExpr" : "computeEzAccountTypeName()",
       "operationBrokerExpr" : "ezBrokerName",
       "operationQuantityExpr" : "ezOperation_QUANTITE",
-      "operationTypeExpr" : "'Achat titres'",
+      "operationTypeExpr" : "\"Achat titres\"",
       "operationActionNameExpr" : "ezOperationShareUserName",
       "operationCountryExpr" : "ezMarketCountry",
       "operationAmountExpr" : "-ezOperation_BRUT",
-      "operationDescriptionExpr" : "'Achat de '+ ezOperation_QUANTITE+' '+ezShareCode+' @ '+ ezOperation_COURS+ ezAccountCurrencySymbol"
+      "operationDescriptionExpr" : "\"Achat de \"+ ezOperation_QUANTITE+\" \"+ezShareCode+\" @ \"+ ezOperation_COURS + ezAccountCurrencySymbol"
     },
     {
       "operationDateExpr" : "ezOperation_DATE",
       "operationCompteTypeExpr" : "computeEzAccountTypeName()",
       "operationBrokerExpr" : "ezBrokerName",
       "operationQuantityExpr" : "ezOperation_QUANTITE",
-      "operationTypeExpr" : "'Courtage sur achat de titres'",
+      "operationTypeExpr" : "\"Courtage sur achat de titres\"",
       "operationActionNameExpr" : "ezOperationShareUserName",
       "operationCountryExpr" : "ezMarketCountry",
       "operationAmountExpr" : "-ezOperation_COURTAGE",
-      "operationDescriptionExpr" : "ezOperation_QUANTITE+' '+ezShareCode+' @ '+ ezOperation_COURS+ ezAccountCurrencySymbol"
+      "operationDescriptionExpr" : "ezOperation_QUANTITE+\" \"+ezShareCode+\" @ \"+ ezOperation_COURS + ezAccountCurrencySymbol"
     }
   ],
   "portefeuilleRules" : [
@@ -51,7 +51,7 @@
       "portefeuilleValeurExpr" : "ezLiquidityName",
       "portefeuilleCompteExpr" : "computeEzAccountTypeName()",
       "portefeuilleCourtierExpr" : "ezBrokerName",
-      "portefeuilleTickerGoogleFinanceExpr" : "'LIQUIDITE'",
+      "portefeuilleTickerGoogleFinanceExpr" : "\"LIQUIDITE\"",
       "portefeuillePaysExpr" : "ezMonPortefeuillePays",
       "portefeuilleSecteurExpr" : "ezMonPortefeuilleSecteur",
       "portefeuilleIndustrieExpr" : "ezMonPortefeuilleIndustrie",

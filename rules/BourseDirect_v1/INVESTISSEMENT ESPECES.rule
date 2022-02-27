@@ -7,18 +7,18 @@
     "Versement sur le compte de liquidité."
   ],
   "ezLoadVersion" : 1,
-  "condition" : "ezOperation_INFO1 == 'INVESTISSEMENT ESPECES'",
+  "condition" : "ezOperation_INFO1 == \"INVESTISSEMENT ESPECES\"",
   "operationRules" : [
     {
       "operationDateExpr" : "ezOperation_DATE",
       "operationCompteTypeExpr" : "computeEzAccountTypeName()",
       "operationBrokerExpr" : "ezBrokerName",
       "operationQuantityExpr" : "ezOperation_CREDIT",
-      "operationTypeExpr" : "'Versement fonds'",
+      "operationTypeExpr" : "\"Versement fonds\"",
       "operationActionNameExpr" : "ezLiquidityName",
-      "operationCountryExpr" : "''",
+      "operationCountryExpr" : "\"\"",
       "operationAmountExpr" : "ezOperation_CREDIT",
-      "operationDescriptionExpr" : "'Versement de '+ezOperation_CREDIT+ ezAccountCurrencySymbol + ' sur le compte: '+ ezAccountName"
+      "operationDescriptionExpr" : "\"Versement de \"+ezOperation_CREDIT+ ezAccountCurrencySymbol + \" sur le compte: \"+ ezAccountName"
     }
   ],
   "portefeuilleRules" : [
@@ -26,7 +26,7 @@
       "portefeuilleValeurExpr" : "ezLiquidityName",
       "portefeuilleCompteExpr" : "computeEzAccountTypeName()",
       "portefeuilleCourtierExpr" : "ezBrokerName",
-      "portefeuilleTickerGoogleFinanceExpr" : "'LIQUIDITE'",
+      "portefeuilleTickerGoogleFinanceExpr" : "\"LIQUIDITE\"",
       "portefeuillePaysExpr" : "ezMonPortefeuillePays",
       "portefeuilleSecteurExpr" : "ezMonPortefeuilleSecteur",
       "portefeuilleIndustrieExpr" : "ezMonPortefeuilleIndustrie",
