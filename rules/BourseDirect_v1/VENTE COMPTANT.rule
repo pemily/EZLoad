@@ -1,14 +1,13 @@
 {
   "broker" : "BourseDirect",
   "brokerFileVersion" : 1,
-  "name" : "VENTE ETRANGER",
+  "name" : "VENTE COMPTANT",
   "enabled" : true,
   "description" : [
-    "Achat d'actions étrangères.",
-    "TODO: Dans monPortefeuille: La quantité doit etre divisé par 100 si valeur anglaise, est ce pareil dans Mes Opérations?"
+    "Vente d'actions."
   ],
   "ezLoadVersion" : 1,
-  "condition" : "ezOperation_INFO1 == \"VENTE ETRANGER\"",
+  "condition" : "ezOperation_INFO1 == \"VENTE COMPTANT\"",
   "shareId" : "ezOperation_INFO2",
   "operationRules" : [
     {
@@ -20,7 +19,7 @@
       "operationActionNameExpr" : "ezOperationShareUserName",
       "operationCountryExpr" : "ezMarketCountry",
       "operationAmountExpr" : "ezOperation_BRUT",
-      "operationDescriptionExpr" : "\"Vente de \"+ (-ezOperation_QUANTITE) + \" \" +ezShareCode + \" @ \" + ezOperation_COURS+ ezAccountCurrencySymbol"
+      "operationDescriptionExpr" : "\"Vente de \"+ (-ezOperation_QUANTITE)+\" \"+ezShareCode+\" @ \"+ ezOperation_COURS + ezAccountCurrencySymbol"
     },
     {
       "operationDateExpr" : "ezOperation_DATE",
@@ -57,7 +56,7 @@
       "portefeuilleSecteurExpr" : "ezMonPortefeuilleSecteur",
       "portefeuilleIndustrieExpr" : "ezMonPortefeuilleIndustrie",
       "portefeuilleEligibiliteAbbattement40Expr" : "ezMonPortefeuilleEligibiliteAbbatement40",
-      "portefeuilleTypeExpr" : "computePortefeuilleType()",
+      "portefeuilleTypeExpr" : "ezMonPortefeuilleEligibiliteAbbatement40",
       "portefeuillePrixDeRevientExpr" : "ezMonPortefeuillePrixRevientUnitaire",
       "portefeuilleQuantiteExpr" : "ezMonPortefeuilleQuantite + ezOperation_CREDIT"
     }

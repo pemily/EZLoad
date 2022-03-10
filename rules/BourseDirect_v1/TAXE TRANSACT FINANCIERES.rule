@@ -4,7 +4,7 @@
   "name" : "TAXE TRANSACT FINANCIERES",
   "enabled" : true,
   "description" : [
-    "??je n'ai pas la quantité dans le fichier pdf, j'ai laissé vide, ok?"
+    ""
   ],
   "ezLoadVersion" : 1,
   "condition" : "ezOperation_INFO1 == \"TAXE TRANSACT FINANCIERES\"",

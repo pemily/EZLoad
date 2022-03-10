@@ -1,24 +1,24 @@
 {
   "broker" : "BourseDirect",
   "brokerFileVersion" : 1,
-  "name" : "ESPECES SUR OST",
+  "name" : "REGULARISATION PEA VIRT SOLDE ESPECES",
   "enabled" : true,
   "description" : [
-    "Mouvement d'espèces sur une \"Opération Sur Titre\""
+    "Versement de fonds sur le compte espèce."
   ],
   "ezLoadVersion" : 1,
-  "condition" : "ezOperation_INFO1 == \"ESPECES SUR OST\"",
-  "shareId" : "ezOperation_INFO2",
+  "condition" : "ezOperation_INFO1 == \"REGULARISATION PEA\" && ezOperation_INFO2 == \"VIRT SOLDE ESPECES\"",
   "operationRules" : [
     {
       "operationDateExpr" : "ezOperation_DATE",
       "operationCompteTypeExpr" : "computeEzAccountTypeName()",
       "operationBrokerExpr" : "ezBrokerName",
-      "operationQuantityExpr" : "ezOperation_DEBIT",
-      "operationTypeExpr" : "\"Divers\"",
+      "operationQuantityExpr" : "ezOperation_CREDIT",
+      "operationTypeExpr" : "\"Versement fonds\"",
       "operationActionNameExpr" : "ezLiquidityName",
       "operationCountryExpr" : "\"\"",
-      "operationAmountExpr" : "ezOperation_DEBIT"
+      "operationAmountExpr" : "ezOperation_CREDIT",
+      "operationDescriptionExpr" : "\"Versement de \" + ezOperation_CREDIT + ezAccountCurrencySymbol + \" sur le compte \"+ ezAccountName"
     }
   ],
   "portefeuilleRules" : [
@@ -33,7 +33,7 @@
       "portefeuilleEligibiliteAbbattement40Expr" : "ezMonPortefeuilleEligibiliteAbbatement40",
       "portefeuilleTypeExpr" : "computePortefeuilleType()",
       "portefeuillePrixDeRevientExpr" : "ezMonPortefeuillePrixRevientUnitaire",
-      "portefeuilleQuantiteExpr" : "ezMonPortefeuilleQuantite - ezOperation_DEBIT"
+      "portefeuilleQuantiteExpr" : "ezMonPortefeuilleQuantite + ezOperation_CREDIT"
     }
   ]
 }

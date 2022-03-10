@@ -4,8 +4,7 @@
   "name" : "VIREMENT ENTREE DE TITRES",
   "enabled" : true,
   "description" : [
-    "Transfert de titre d'un courtier vers BourseDirect.",
-    "?? dans opération j'ai mis achat titres ??"
+    "Transfert de titre d'un courtier vers BourseDirect. Pas de changement sur la ligne de liquidité."
   ],
   "ezLoadVersion" : 1,
   "condition" : "ezOperation_INFO1 == \"VIREMENT ENTREE DE TITRES\"",
@@ -19,7 +18,7 @@
       "operationTypeExpr" : "\"Achat titres\"",
       "operationActionNameExpr" : "ezOperationShareUserName",
       "operationCountryExpr" : "ezMarketCountry",
-      "operationAmountExpr" : "ezOperation_QUANTITE * ezOperation_P_A_M",
+      "operationAmountExpr" : "0",
       "operationDescriptionExpr" : "\"Transfert de \" + ezOperation_QUANTITE + \" \" + ezShareCode"
     }
   ],
