@@ -5,7 +5,7 @@
   "enabled" : true,
   "description" : [
     "Versement de dividendes en actions, cette opération est enregistré comme étant un versement du dividende en espèces puis en achat de titre.",
-    "=> j'ai mis Dividende brut ou Dividende versé?"
+    ""
   ],
   "ezLoadVersion" : 1,
   "condition" : "ezOperation_INFO1 == \"DIVIDENDE OPTIONNEL\"",

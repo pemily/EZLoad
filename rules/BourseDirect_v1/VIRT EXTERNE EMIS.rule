@@ -1,25 +1,24 @@
 {
   "broker" : "BourseDirect",
   "brokerFileVersion" : 1,
-  "name" : "ESPECES SUR OST",
+  "name" : "VIRT EXTERNE EMIS",
   "enabled" : true,
   "description" : [
-    "Mouvement d'espèces sur une \"Opération Sur Titre\""
+    "Retrait de fonds du compte espèce."
   ],
   "ezLoadVersion" : 1,
-  "condition" : "ezOperation_INFO1 == \"ESPECES SUR OST\"",
-  "shareId" : "ezOperation_INFO2",
+  "condition" : "ezOperation_INFO1 == \"VIRT EXTERNE EMIS\"",
   "operationRules" : [
     {
       "operationDateExpr" : "ezOperation_DATE",
       "operationCompteTypeExpr" : "computeEzAccountTypeName()",
       "operationBrokerExpr" : "ezBrokerName",
       "operationQuantityExpr" : "ezOperation_DEBIT",
-      "operationTypeExpr" : "\"Divers\"",
+      "operationTypeExpr" : "\"Retrait fonds\"",
       "operationActionNameExpr" : "ezLiquidityName",
       "operationCountryExpr" : "\"\"",
       "operationAmountExpr" : "ezOperation_DEBIT",
-      "operationDescriptionExpr" : "\"Mvt d'espèce après une opération sur titre\""
+      "operationDescriptionExpr" : "\"Retrait de \" + ezOperation_DEBIT + ezAccountCurrencySymbol + \" sur le compte \"+ ezAccountName"
     }
   ],
   "portefeuilleRules" : [

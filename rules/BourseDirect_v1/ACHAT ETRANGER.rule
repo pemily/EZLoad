@@ -5,7 +5,7 @@
   "enabled" : true,
   "description" : [
     "Achat d'actions étrangères.",
-    "Dans monPortefeuille: La quantité doit etre divisé par 100 si valeur anglaise, est ce pareil dans Mes Opérations?"
+    "TODO: Tester des valeurs anglaises (/100 à faire qqpart) verifier VENTE ETRANGER également"
   ],
   "ezLoadVersion" : 1,
   "condition" : "ezOperation_INFO1 == \"ACHAT ETRANGER\"",
