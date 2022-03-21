@@ -18,7 +18,7 @@
       "operationTypeExpr" : "\"Divers\"",
       "operationActionNameExpr" : "ezLiquidityName",
       "operationCountryExpr" : "\"\"",
-      "operationAmountExpr" : "ezOperation_DEBIT",
+      "operationAmountExpr" : "-ezOperation_DEBIT",
       "operationDescriptionExpr" : "\"Mvt d'espèce après une opération sur titre\""
     }
   ],

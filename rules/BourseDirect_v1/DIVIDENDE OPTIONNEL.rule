@@ -16,22 +16,11 @@
       "operationCompteTypeExpr" : "computeEzAccountTypeName()",
       "operationBrokerExpr" : "ezBrokerName",
       "operationQuantityExpr" : "ezOperation_QUANTITE",
-      "operationTypeExpr" : "\"Dividende versé\"",
-      "operationActionNameExpr" : "ezLiquidityName",
-      "operationCountryExpr" : "''",
-      "operationAmountExpr" : "ezOperation_COURS*ezOperation_QUANTITE",
-      "operationDescriptionExpr" : "\"Versement de dividende en actions (op1 sur liquidité): \" + ezOperation_QUANTITE+ \" de \" + ezOperationShareUserName + \"(\" +ezShareCode + \")\""
-    },
-    {
-      "operationDateExpr" : "ezOperation_DATE",
-      "operationCompteTypeExpr" : "computeEzAccountTypeName()",
-      "operationBrokerExpr" : "ezBrokerName",
-      "operationQuantityExpr" : "ezOperation_QUANTITE",
       "operationTypeExpr" : "\"Achat titres\"",
       "operationActionNameExpr" : "ezOperationShareUserName",
       "operationCountryExpr" : "ezMarketCountry",
-      "operationAmountExpr" : "-ezOperation_COURS*ezOperation_QUANTITE",
-      "operationDescriptionExpr" : "\"Versement de dividende en actions (op2 achat): \" + ezOperation_QUANTITE+ \" de \" + ezOperationShareUserName + \"(\"+ezShareCode+\")\""
+      "operationAmountExpr" : "-ezOperation_DEBIT",
+      "operationDescriptionExpr" : "\"Versement de dividende en actions: \" + ezOperation_QUANTITE+ \" de \" + ezOperationShareUserName + \"(\"+ezShareCode+\")\""
     }
   ],
   "portefeuilleRules" : [
