@@ -11,5 +11,5 @@ TODO
 
 ## Configuration
 * Aller sur l'onglet Configuration 
-* Cliquer sur Les lien "info"
+* Cliquer sur le lien "Créer le fichier d'accès Google Drive" et les liens "info"
 
