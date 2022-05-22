@@ -5,7 +5,7 @@ Les règles pour le logiciel EZLoad
 Sélectionner la derniere version ici:
  https://github.com/pemily/EZLoad-src/tree/main/release
 
-Et télécharger le jar, puis le fichier .bat pour windows ou .sh pour mac ou unix
+Et télécharger le zip, puis executer le .bat pour windows ou .sh pour mac ou unix
  
 
 ## Lancement
