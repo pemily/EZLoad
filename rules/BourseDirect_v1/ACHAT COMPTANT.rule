@@ -4,7 +4,7 @@
   "name" : "ACHAT COMPTANT",
   "enabled" : true,
   "description" : [
-    "Achat d'actions."
+    "Achat d'actions"
   ],
   "ezLoadVersion" : 1,
   "condition" : "ezOperation_INFO1 == \"ACHAT COMPTANT\"",
