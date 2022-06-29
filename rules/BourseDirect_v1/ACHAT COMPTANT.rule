@@ -22,7 +22,7 @@
       "operationDescriptionExpr" : "\"Achat de \"+ ezOperation_QUANTITE+\" \"+ezShareCode+\" @ \"+ ezOperation_COURS + ezAccountCurrencySymbol"
     },
     {
-      "condition" : "ez.isDefined(ezOperation_COURTAGE) && ezOperation_COURTAGE != 0",
+      "condition" : "ez.isDefined('ezOperation_COURTAGE') && ezOperation_COURTAGE != 0",
       "operationDateExpr" : "ezOperation_DATE",
       "operationCompteTypeExpr" : "computeEzAccountTypeName()",
       "operationBrokerExpr" : "ezBrokerName",
