@@ -23,7 +23,7 @@
       "operationDescriptionExpr" : "\"Dividende versé pour \" + (-ezOperation_QUANTITE) + \" actions \" + ezShareCode"
     },
     {
-      "condition" : "ez.isDefined(ezOperation_CONTRI_SOC) && ezOperation_CONTRI_SOC != 0",
+      "condition" : "ez.isDefined('ezOperation_CONTRI_SOC') && ezOperation_CONTRI_SOC != 0",
       "operationDateExpr" : "ezOperation_DATE",
       "operationCompteTypeExpr" : "computeEzAccountTypeName()",
       "operationBrokerExpr" : "ezBrokerName",
@@ -35,7 +35,7 @@
       "operationDescriptionExpr" : "\"Prélèvement sociaux pour dividende versé de \" + (-ezOperation_QUANTITE) + \" actions \" + ezShareCode"
     },
     {
-      "condition" : "ez.isDefined(ezOperation_PRELEVEM) && ezOperation_PRELEVEM != 0",
+      "condition" : "ez.isDefined('ezOperation_PRELEVEM') && ezOperation_PRELEVEM != 0",
       "operationDateExpr" : "ezOperation_DATE",
       "operationCompteTypeExpr" : "computeEzAccountTypeName()",
       "operationBrokerExpr" : "ezBrokerName",
@@ -47,7 +47,7 @@
       "operationDescriptionExpr" : "\"Retenue fiscale pour dividende versé de \" + (-ezOperation_QUANTITE) + \" actions \" + ezShareCode"
     },
     {
-      "condition" : "ez.isDefined(ezOperation_CRED_IMPOT ) && ezOperation_CRED_IMPOT != 0",
+      "condition" : "ez.isDefined('ezOperation_CRED_IMPOT') && ezOperation_CRED_IMPOT != 0",
       "operationDateExpr" : "ezOperation_DATE",
       "operationCompteTypeExpr" : "computeEzAccountTypeName()",
       "operationBrokerExpr" : "ezBrokerName",
