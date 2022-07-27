@@ -17,7 +17,7 @@
       "operationQuantityExpr" : "ezOperation_QUANTITE",
       "operationTypeExpr" : "\"Achat titres\"",
       "operationActionNameExpr" : "ezOperationShareUserName",
-      "operationCountryExpr" : "ezMarketCountry",
+      "operationCountryExpr" : "ezShareCountry",
       "operationAmountExpr" : "-ezOperation_BRUT",
       "operationDescriptionExpr" : "\"Achat de \"+ ezOperation_QUANTITE+\" \"+ezShareCode+\" @ \"+ ezOperation_COURS + ezAccountCurrencySymbol"
     },
@@ -29,7 +29,7 @@
       "operationQuantityExpr" : "ezOperation_QUANTITE",
       "operationTypeExpr" : "\"Courtage sur achat de titres\"",
       "operationActionNameExpr" : "ezOperationShareUserName",
-      "operationCountryExpr" : "ezMarketCountry",
+      "operationCountryExpr" : "ezShareCountry",
       "operationAmountExpr" : "-ezOperation_COURTAGE",
       "operationDescriptionExpr" : "ezOperation_QUANTITE+\" \"+ezShareCode+\" @ \"+ ezOperation_COURS + ezAccountCurrencySymbol"
     }
@@ -40,7 +40,7 @@
       "portefeuilleCompteExpr" : "computeEzAccountTypeName()",
       "portefeuilleCourtierExpr" : "ezBrokerName",
       "portefeuilleTickerGoogleFinanceExpr" : "ezShareCode",
-      "portefeuillePaysExpr" : "ezMarketCountry",
+      "portefeuillePaysExpr" : "ezShareCountry",
       "portefeuilleSecteurExpr" : "ezMonPortefeuilleSecteur",
       "portefeuilleIndustrieExpr" : "ezMonPortefeuilleIndustrie",
       "portefeuilleEligibiliteAbbattement40Expr" : "ezMonPortefeuilleEligibiliteAbbatement40",

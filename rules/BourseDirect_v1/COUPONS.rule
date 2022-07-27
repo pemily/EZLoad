@@ -18,7 +18,7 @@
       "operationQuantityExpr" : "-ezOperation_QUANTITE",
       "operationTypeExpr" : "\"Dividende brut\"",
       "operationActionNameExpr" : "ezOperationShareUserName",
-      "operationCountryExpr" : "ezMarketCountry",
+      "operationCountryExpr" : "ezShareCountry",
       "operationAmountExpr" : "ezOperation_BRUT",
       "operationDescriptionExpr" : "\"Dividende versé pour \" + (-ezOperation_QUANTITE) + \" actions \" + ezShareCode"
     },
@@ -30,7 +30,7 @@
       "operationQuantityExpr" : "-ezOperation_QUANTITE",
       "operationTypeExpr" : "\"Prélèvements sociaux\"",
       "operationActionNameExpr" : "ezOperationShareUserName",
-      "operationCountryExpr" : "ezMarketCountry",
+      "operationCountryExpr" : "ezShareCountry",
       "operationAmountExpr" : "-ezOperation_CONTRI_SOC",
       "operationDescriptionExpr" : "\"Prélèvement sociaux pour dividende versé de \" + (-ezOperation_QUANTITE) + \" actions \" + ezShareCode"
     },
@@ -42,7 +42,7 @@
       "operationQuantityExpr" : "-ezOperation_QUANTITE",
       "operationTypeExpr" : "\"Retenue fiscale\"",
       "operationActionNameExpr" : "ezOperationShareUserName",
-      "operationCountryExpr" : "ezMarketCountry",
+      "operationCountryExpr" : "ezShareCountry",
       "operationAmountExpr" : "-ezOperation_PRELEVEM",
       "operationDescriptionExpr" : "\"Retenue fiscale pour dividende versé de \" + (-ezOperation_QUANTITE) + \" actions \" + ezShareCode"
     },
@@ -54,7 +54,7 @@
       "operationQuantityExpr" : "-ezOperation_QUANTITE",
       "operationTypeExpr" : "\"Acompte Impôt sur le Revenu\"",
       "operationActionNameExpr" : "ezOperationShareUserName",
-      "operationCountryExpr" : "ezMarketCountry",
+      "operationCountryExpr" : "ezShareCountry",
       "operationAmountExpr" : "ezOperation_CRED_IMPOT",
       "operationDescriptionExpr" : "\"Crédit d'Impôt pour dividende versé de \" + (-ezOperation_QUANTITE) + \" actions \" + ezShareCode"
     }
