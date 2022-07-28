@@ -4,7 +4,7 @@
   "name" : "ESPECES SUR OST",
   "enabled" : true,
   "description" : [
-    "Mouvement d'espèces sur une \"Opération Sur Titre\""
+    "Mouvement d'espèces sur une \"Opération Sur Titre\"."
   ],
   "ezLoadVersion" : 1,
   "condition" : "ezOperation_INFO1 == \"ESPECES SUR OST\"",
@@ -64,5 +64,6 @@
       "portefeuillePrixDeRevientExpr" : "ezMonPortefeuillePrixRevientUnitaire",
       "portefeuilleQuantiteExpr" : "ezMonPortefeuilleQuantite + ezOperation_CREDIT"
     }
-  ]
+  ],
+  "performanceRule" : { }
 }

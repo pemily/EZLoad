@@ -4,7 +4,7 @@
   "name" : "DROITS DE GARDE",
   "enabled" : true,
   "description" : [
-    "Frais du courtier"
+    "Frais du courtier."
   ],
   "ezLoadVersion" : 1,
   "condition" : "ezOperation_INFO1 == \"DROITS DE GARDE\"",
@@ -35,5 +35,6 @@
       "portefeuillePrixDeRevientExpr" : "ezMonPortefeuillePrixRevientUnitaire",
       "portefeuilleQuantiteExpr" : "ezMonPortefeuilleQuantite - ezOperation_DEBIT"
     }
-  ]
+  ],
+  "performanceRule" : { }
 }

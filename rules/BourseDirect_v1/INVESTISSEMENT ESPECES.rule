@@ -35,5 +35,8 @@
       "portefeuillePrixDeRevientExpr" : "ezMonPortefeuillePrixRevientUnitaire",
       "portefeuilleQuantiteExpr" : "ezMonPortefeuilleQuantite + ezOperation_CREDIT"
     }
-  ]
+  ],
+  "performanceRule" : {
+    "inputOutputValueExpr" : "ezOperation_CREDIT"
+  }
 }

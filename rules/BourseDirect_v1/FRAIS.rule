@@ -4,7 +4,7 @@
   "name" : "FRAIS",
   "enabled" : true,
   "description" : [
-    "Frais"
+    "Frais."
   ],
   "ezLoadVersion" : 1,
   "condition" : "ezOperation_INFO1 == \"FRAIS\"",
@@ -35,5 +35,6 @@
       "portefeuillePrixDeRevientExpr" : "ezMonPortefeuillePrixRevientUnitaire",
       "portefeuilleQuantiteExpr" : "ezMonPortefeuilleQuantite - ezOperation_DEBIT"
     }
-  ]
+  ],
+  "performanceRule" : { }
 }

@@ -36,5 +36,6 @@
       "portefeuillePrixDeRevientExpr" : "computePRU()",
       "portefeuilleQuantiteExpr" : "ezMonPortefeuilleQuantite + ezOperation_QUANTITE"
     }
-  ]
+  ],
+  "performanceRule" : { }
 }

@@ -5,7 +5,7 @@
   "enabled" : true,
   "description" : [
     "Achat d'actions étrangères.",
-    "TODO: Tester des valeurs anglaises (/100 à faire qqpart) verifier VENTE ETRANGER également"
+    "TODO: Tester des valeurs anglaises (/100 à faire qqpart) verifier VENTE ETRANGER également."
   ],
   "ezLoadVersion" : 1,
   "condition" : "ezOperation_INFO1 == \"ACHAT ETRANGER\"",
@@ -62,5 +62,6 @@
       "portefeuillePrixDeRevientExpr" : "ezMonPortefeuillePrixRevientUnitaire",
       "portefeuilleQuantiteExpr" : "ezMonPortefeuilleQuantite - ezOperation_DEBIT"
     }
-  ]
+  ],
+  "performanceRule" : { }
 }

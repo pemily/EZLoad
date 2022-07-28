@@ -5,7 +5,7 @@
   "enabled" : true,
   "description" : [
     "Versement de dividende sur le compte de liquidité.",
-    "La \"commission\" n'a pas été prise en compte => je n'ai pas d'exemple toujours a 0"
+    "La \"commission\" n'a pas été prise en compte => je n'ai pas d'exemple toujours a 0."
   ],
   "ezLoadVersion" : 1,
   "condition" : "ezOperation_INFO1 == \"COUPONS\"",
@@ -73,5 +73,6 @@
       "portefeuillePrixDeRevientExpr" : "ezMonPortefeuillePrixRevientUnitaire",
       "portefeuilleQuantiteExpr" : "ezMonPortefeuilleQuantite + ezOperation_CREDIT"
     }
-  ]
+  ],
+  "performanceRule" : { }
 }
