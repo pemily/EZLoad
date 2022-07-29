@@ -17,7 +17,7 @@
       "operationQuantityExpr" : "\"\"",
       "operationTypeExpr" : "\"Taxe sur les Transactions\"",
       "operationActionNameExpr" : "ezOperationShareUserName",
-      "operationCountryExpr" : "ezMarketCountry",
+      "operationCountryExpr" : "ezShareCountry",
       "operationAmountExpr" : "-ezOperation_DEBIT",
       "operationDescriptionExpr" : "\"Taxe sur les Transactions (achat)\""
     }

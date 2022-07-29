@@ -1,41 +1,42 @@
 {
   "broker" : "BourseDirect",
   "brokerFileVersion" : 1,
-  "name" : "DIVIDENDE OPTIONNEL",
+  "name" : "INDEMNISATION",
   "enabled" : true,
   "description" : [
-    "Versement de dividendes en actions, cette opération est enregistré comme étant un versement du dividende en espèces puis en achat de titre.",
     ""
   ],
   "ezLoadVersion" : 1,
-  "condition" : "ezOperation_INFO1 == \"DIVIDENDE OPTIONNEL\"",
+  "condition" : "ezOperation_INFO1 == \"INDEMNISATION\"",
   "shareId" : "ezOperation_INFO2",
   "operationRules" : [
     {
+      "condition" : "ezOperation_CREDIT != 0",
       "operationDateExpr" : "ezOperation_DATE",
       "operationCompteTypeExpr" : "computeEzAccountTypeName()",
       "operationBrokerExpr" : "ezBrokerName",
-      "operationQuantityExpr" : "ezOperation_QUANTITE",
-      "operationTypeExpr" : "\"Achat titres\"",
+      "operationQuantityExpr" : "\"Divers\"",
+      "operationTypeExpr" : "\"Indémnisation\"",
       "operationActionNameExpr" : "ezOperationShareUserName",
       "operationCountryExpr" : "ezShareCountry",
-      "operationAmountExpr" : "-ezOperation_DEBIT",
-      "operationDescriptionExpr" : "\"Versement de dividende en actions: \" + ezOperation_QUANTITE+ \" de \" + ezOperationShareUserName + \"(\"+ezShareCode+\")\""
+      "operationAmountExpr" : "ezOperation_CREDIT",
+      "operationDescriptionExpr" : "\"Indémnisation pour le titre \" +ezShareCode"
     }
   ],
   "portefeuilleRules" : [
     {
-      "portefeuilleValeurExpr" : "ezOperationShareUserName",
+      "condition" : "ezOperation_CREDIT != 0",
+      "portefeuilleValeurExpr" : "ezLiquidityName",
       "portefeuilleCompteExpr" : "computeEzAccountTypeName()",
       "portefeuilleCourtierExpr" : "ezBrokerName",
-      "portefeuilleTickerGoogleFinanceExpr" : "ezShareCode",
-      "portefeuillePaysExpr" : "ezShareCountry",
+      "portefeuilleTickerGoogleFinanceExpr" : "\"LIQUIDITE\"",
+      "portefeuillePaysExpr" : "ezMonPortefeuillePays",
       "portefeuilleSecteurExpr" : "ezMonPortefeuilleSecteur",
       "portefeuilleIndustrieExpr" : "ezMonPortefeuilleIndustrie",
       "portefeuilleEligibiliteAbbattement40Expr" : "ezMonPortefeuilleEligibiliteAbbatement40",
       "portefeuilleTypeExpr" : "computePortefeuilleType()",
-      "portefeuillePrixDeRevientExpr" : "computePRU()",
-      "portefeuilleQuantiteExpr" : "ezMonPortefeuilleQuantite + ezOperation_QUANTITE"
+      "portefeuillePrixDeRevientExpr" : "ezMonPortefeuillePrixRevientUnitaire",
+      "portefeuilleQuantiteExpr" : "ezMonPortefeuilleQuantite + ezOperation_CREDIT"
     }
   ]
 }

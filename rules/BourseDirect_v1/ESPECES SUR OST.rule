@@ -11,6 +11,7 @@
   "shareId" : "ezOperation_INFO2",
   "operationRules" : [
     {
+      "condition" : "ez.isDefined('ezOperation_DEBIT') && ezOperation_DEBIT != 0",
       "operationDateExpr" : "ezOperation_DATE",
       "operationCompteTypeExpr" : "computeEzAccountTypeName()",
       "operationBrokerExpr" : "ezBrokerName",
@@ -19,11 +20,24 @@
       "operationActionNameExpr" : "ezLiquidityName",
       "operationCountryExpr" : "\"\"",
       "operationAmountExpr" : "-ezOperation_DEBIT",
-      "operationDescriptionExpr" : "\"Mvt d'espèce après une opération sur titre\""
+      "operationDescriptionExpr" : "\"Mvt d'espèce après une opération sur titre: \" + ezShareCode"
+    },
+    {
+      "condition" : "ez.isDefined('ezOperation_CREDIT') && ezOperation_CREDIT != 0",
+      "operationDateExpr" : "ezOperation_DATE",
+      "operationCompteTypeExpr" : "computeEzAccountTypeName()",
+      "operationBrokerExpr" : "ezBrokerName",
+      "operationQuantityExpr" : "ezOperation_CREDIT",
+      "operationTypeExpr" : "\"Divers\"",
+      "operationActionNameExpr" : "ezLiquidityName",
+      "operationCountryExpr" : "\"\"",
+      "operationAmountExpr" : "ezOperation_CREDIT",
+      "operationDescriptionExpr" : "\"Mvt d'espèce après une opération sur titre: \" + ezShareCode"
     }
   ],
   "portefeuilleRules" : [
     {
+      "condition" : "ez.isDefined('ezOperation_DEBIT') && ezOperation_DEBIT != 0",
       "portefeuilleValeurExpr" : "ezLiquidityName",
       "portefeuilleCompteExpr" : "computeEzAccountTypeName()",
       "portefeuilleCourtierExpr" : "ezBrokerName",
@@ -35,6 +49,20 @@
       "portefeuilleTypeExpr" : "computePortefeuilleType()",
       "portefeuillePrixDeRevientExpr" : "ezMonPortefeuillePrixRevientUnitaire",
       "portefeuilleQuantiteExpr" : "ezMonPortefeuilleQuantite - ezOperation_DEBIT"
+    },
+    {
+      "condition" : "ez.isDefined('ezOperation_CREDIT') && ezOperation_CREDIT != 0",
+      "portefeuilleValeurExpr" : "ezLiquidityName",
+      "portefeuilleCompteExpr" : "computeEzAccountTypeName()",
+      "portefeuilleCourtierExpr" : "ezBrokerName",
+      "portefeuilleTickerGoogleFinanceExpr" : "\"LIQUIDITE\"",
+      "portefeuillePaysExpr" : "ezMonPortefeuillePays",
+      "portefeuilleSecteurExpr" : "ezMonPortefeuilleSecteur",
+      "portefeuilleIndustrieExpr" : "ezMonPortefeuilleIndustrie",
+      "portefeuilleEligibiliteAbbattement40Expr" : "ezMonPortefeuilleEligibiliteAbbatement40",
+      "portefeuilleTypeExpr" : "computePortefeuilleType()",
+      "portefeuillePrixDeRevientExpr" : "ezMonPortefeuillePrixRevientUnitaire",
+      "portefeuilleQuantiteExpr" : "ezMonPortefeuilleQuantite + ezOperation_CREDIT"
     }
   ]
 }
