@@ -61,5 +61,6 @@
       "portefeuillePrixDeRevientExpr" : "ezMonPortefeuillePrixRevientUnitaire",
       "portefeuilleQuantiteExpr" : "ezMonPortefeuilleQuantite - ezOperation_DEBIT"
     }
-  ]
+  ],
+  "performanceRule" : { }
 }
