@@ -3,7 +3,7 @@ Les règles pour le logiciel EZLoad
 
 ## Téléchargement de EZLoad
 Sélectionner la derniere version ici:
- https://github.com/pemily/EZLoad-src/tree/main/release
+ https://github.com/pemily/EZLoad-src/releases
 
 Et télécharger le zip, puis executer le .bat pour windows ou .sh pour mac ou unix
  
