@@ -1,0 +1,54 @@
+{
+  "broker" : "BourseDirect",
+  "brokerFileVersion" : 1,
+  "name" : "DIVISION",
+  "enabled" : true,
+  "description" : [
+    "Division d'action, la quantité peut être négative ou positive"
+  ],
+  "ezLoadVersion" : 1,
+  "condition" : "ezOperation_INFO1 == \"DIVISION\"",
+  "shareId" : "ezOperation_INFO2",
+  "operationRules" : [
+    {
+      "condition" : "ezOperation_QUANTITE > 0",
+      "operationDateExpr" : "ezOperation_DATE",
+      "operationCompteTypeExpr" : "computeEzAccountTypeName()",
+      "operationBrokerExpr" : "ezBrokerName",
+      "operationQuantityExpr" : "ezOperation_QUANTITE",
+      "operationTypeExpr" : "\"Achat titres\"",
+      "operationActionNameExpr" : "ezOperationShareUserName",
+      "operationCountryExpr" : "ezShareCountry",
+      "operationAmountExpr" : "0",
+      "operationDescriptionExpr" : "\"Mvt de \"+ ezOperation_QUANTITE+\" \"+ezShareCode"
+    },
+    {
+      "condition" : "ezOperation_QUANTITE < 0",
+      "operationDateExpr" : "ezOperation_DATE",
+      "operationCompteTypeExpr" : "computeEzAccountTypeName()",
+      "operationBrokerExpr" : "ezBrokerName",
+      "operationQuantityExpr" : "ezOperation_QUANTITE",
+      "operationTypeExpr" : "\"Vente titres\"",
+      "operationActionNameExpr" : "ezOperationShareUserName",
+      "operationCountryExpr" : "ezShareCountry",
+      "operationAmountExpr" : "0",
+      "operationDescriptionExpr" : "\"Mvt de \"+ ezOperation_QUANTITE+\" \"+ezShareCode"
+    }
+  ],
+  "portefeuilleRules" : [
+    {
+      "portefeuilleValeurExpr" : "ezOperationShareUserName",
+      "portefeuilleCompteExpr" : "computeEzAccountTypeName()",
+      "portefeuilleCourtierExpr" : "ezBrokerName",
+      "portefeuilleTickerGoogleFinanceExpr" : "ezShareCode",
+      "portefeuillePaysExpr" : "ezShareCountry",
+      "portefeuilleSecteurExpr" : "ezMonPortefeuilleSecteur",
+      "portefeuilleIndustrieExpr" : "computeIndustry()",
+      "portefeuilleEligibiliteAbbattement40Expr" : "ezMonPortefeuilleEligibiliteAbbatement40",
+      "portefeuilleTypeExpr" : "computePortefeuilleType()",
+      "portefeuillePrixDeRevientExpr" : "computePRU()",
+      "portefeuilleQuantiteExpr" : "ezMonPortefeuilleQuantite + ezOperation_QUANTITE"
+    }
+  ],
+  "performanceRule" : { }
+}
