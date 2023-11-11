@@ -1,17 +1,16 @@
 {
   "broker" : "BourseDirect",
   "brokerFileVersion" : 1,
-  "name" : "DIVISION",
+  "name" : "ATTRIBUTION",
   "enabled" : true,
   "description" : [
-    "Division d'action, la quantité peut être négative ou positive"
+    "Dans le cas d'un spin-off de societé, \"une division\" en 2 societés on peut recevoir des actions que l'on a jamais acheté"
   ],
   "ezLoadVersion" : 1,
-  "condition" : "ezOperation_INFO1 == \"DIVISION\"",
+  "condition" : "ezOperation_INFO1 == \"ATTRIBUTION\"",
   "shareId" : "ezOperation_INFO2",
   "operationRules" : [
     {
-      "condition" : "ezOperation_QUANTITE > 0  A faire manuellement dans EZPortfolio: prendre toutes les operations faites dans EZPortfolio et ajouter le nombre d'action a toutes les lignes de l'action concerné, il faudrait que EZLoad parcours l'historique de toutes les operations et le fasse. Et rien ne sera ajouté a l'historique",
       "operationDateExpr" : "ezOperation_DATE",
       "operationCompteTypeExpr" : "computeEzAccountTypeName()",
       "operationBrokerExpr" : "ezBrokerName",
@@ -20,19 +19,7 @@
       "operationActionNameExpr" : "ezOperationShareUserName",
       "operationCountryExpr" : "ezShareCountry",
       "operationAmountExpr" : "0",
-      "operationDescriptionExpr" : "\"Mvt de \"+ ezOperation_QUANTITE+\" \"+ezShareCode"
-    },
-    {
-      "condition" : "ezOperation_QUANTITE < 0",
-      "operationDateExpr" : "ezOperation_DATE",
-      "operationCompteTypeExpr" : "computeEzAccountTypeName()",
-      "operationBrokerExpr" : "ezBrokerName",
-      "operationQuantityExpr" : "ezOperation_QUANTITE",
-      "operationTypeExpr" : "\"Vente titres\"",
-      "operationActionNameExpr" : "ezOperationShareUserName",
-      "operationCountryExpr" : "ezShareCountry",
-      "operationAmountExpr" : "0",
-      "operationDescriptionExpr" : "\"Mvt de \"+ ezOperation_QUANTITE+\" \"+ezShareCode"
+      "operationDescriptionExpr" : "\"Attribution de \"+ ezOperation_QUANTITE+\" \"+ezShareCode"
     }
   ],
   "portefeuilleRules" : [
