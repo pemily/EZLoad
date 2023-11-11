@@ -11,7 +11,7 @@
   "shareId" : "ezOperation_INFO2",
   "operationRules" : [
     {
-      "condition" : "ezOperation_QUANTITE > 0",
+      "condition" : "ezOperation_QUANTITE > 0  A faire manuellement dans EZPortfolio: prendre toutes les operations faites dans EZPortfolio et ajouter le nombre d'action a toutes les lignes de l'action concerné, il faudrait que EZLoad parcours l'historique de toutes les operations et le fasse. Et rien ne sera ajouté a l'historique",
       "operationDateExpr" : "ezOperation_DATE",
       "operationCompteTypeExpr" : "computeEzAccountTypeName()",
       "operationBrokerExpr" : "ezBrokerName",

@@ -43,7 +43,7 @@
       "portefeuilleTickerGoogleFinanceExpr" : "ezShareCode",
       "portefeuillePaysExpr" : "ezShareCountry",
       "portefeuilleSecteurExpr" : "ezMonPortefeuilleSecteur",
-      "portefeuilleIndustrieExpr" : "ezMonPortefeuilleIndustrie",
+      "portefeuilleIndustrieExpr" : "computeIndustry()",
       "portefeuilleEligibiliteAbbattement40Expr" : "ezMonPortefeuilleEligibiliteAbbatement40",
       "portefeuilleTypeExpr" : "computePortefeuilleType()",
       "portefeuillePrixDeRevientExpr" : "computePRU()",

@@ -1,13 +1,13 @@
 {
   "broker" : "BourseDirect",
   "brokerFileVersion" : 1,
-  "name" : "VIREMENT ENTREE DE TITRES",
+  "name" : "ATTRIBUTION",
   "enabled" : true,
   "description" : [
-    "Transfert de titre d'un courtier vers BourseDirect. Pas de changement sur la ligne de liquidité."
+    "Dans le cas d'un spin-off de societé, \"une division\" en 2 societés on peut recevoir des actions que l'on a jamais acheté"
   ],
   "ezLoadVersion" : 1,
-  "condition" : "ezOperation_INFO1 == \"VIREMENT ENTREE DE TITRES\"",
+  "condition" : "ezOperation_INFO1 == \"ATTRIBUTION\"",
   "shareId" : "ezOperation_INFO2",
   "operationRules" : [
     {
@@ -19,7 +19,7 @@
       "operationActionNameExpr" : "ezOperationShareUserName",
       "operationCountryExpr" : "ezShareCountry",
       "operationAmountExpr" : "0",
-      "operationDescriptionExpr" : "\"Transfert de \" + ezOperation_QUANTITE + \" \" + ezShareCode"
+      "operationDescriptionExpr" : "\"Attribution de \"+ ezOperation_QUANTITE+\" \"+ezShareCode"
     }
   ],
   "portefeuilleRules" : [
