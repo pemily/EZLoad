@@ -1,0 +1,41 @@
+{
+  "broker" : "BourseDirect",
+  "brokerFileVersion" : 1,
+  "name" : "OPERATION DIVERSE - TAXE DISTRIBUTION",
+  "enabled" : true,
+  "description" : [
+    "taxe lorsqu'il y a distribution d'actions (cession d'une société en 2 par exemple)"
+  ],
+  "ezLoadVersion" : 1,
+  "condition" : "ezOperation_INFO1 == \"OPERATION DIVERSE\" && ezOperation_INFO3 == \"TAXE DISTRIBUTION\"",
+  "shareId" : "ezOperation_INFO2",
+  "operationRules" : [
+    {
+      "operationDateExpr" : "ezOperation_DATE",
+      "operationCompteTypeExpr" : "computeEzAccountTypeName()",
+      "operationBrokerExpr" : "ezBrokerName",
+      "operationQuantityExpr" : "\"\"",
+      "operationTypeExpr" : "\"Taxe sur les Transactions\"",
+      "operationActionNameExpr" : "ezOperationShareUserName",
+      "operationCountryExpr" : "ezShareCountry",
+      "operationAmountExpr" : "-ezOperation_DEBIT",
+      "operationDescriptionExpr" : "\"Taxe sur la distribution de l'action: \" + ezOperation_INFO2"
+    }
+  ],
+  "portefeuilleRules" : [
+    {
+      "portefeuilleValeurExpr" : "ezLiquidityName",
+      "portefeuilleCompteExpr" : "computeEzAccountTypeName()",
+      "portefeuilleCourtierExpr" : "ezBrokerName",
+      "portefeuilleTickerGoogleFinanceExpr" : "\"LIQUIDITE\"",
+      "portefeuillePaysExpr" : "ezMonPortefeuillePays",
+      "portefeuilleSecteurExpr" : "ezMonPortefeuilleSecteur",
+      "portefeuilleIndustrieExpr" : "ezMonPortefeuilleIndustrie",
+      "portefeuilleEligibiliteAbbattement40Expr" : "ezMonPortefeuilleEligibiliteAbbatement40",
+      "portefeuilleTypeExpr" : "computePortefeuilleType()",
+      "portefeuillePrixDeRevientExpr" : "ezMonPortefeuillePrixRevientUnitaire",
+      "portefeuilleQuantiteExpr" : "ezMonPortefeuilleQuantite - ezOperation_DEBIT"
+    }
+  ],
+  "performanceRule" : { }
+}
